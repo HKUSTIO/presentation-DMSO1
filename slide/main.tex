@@ -43,11 +43,11 @@
 \usepackage{hyperref}
 
 % Title page information
-\title{Presentation Title}
-\subtitle{Subtitle}
-\author{Your Name}
+\title{Frictions in Product Markets}
+\subtitle{Handbook of IO, V4 CH6}
+\author{Liu Zhiming}
 \institute{Hong Kong University of Science and Technology}
-\date{\today}
+\date{March 13, 2025}
 
 \begin{document}
 
@@ -62,53 +62,446 @@
 \end{frame}
 
 % Section 1
-\section{Introduction}
-\begin{frame}{Introduction}
+\section{Search frictions}
+\subsection{Introduction}
+\begin{frame}{Introduction to Search Frictions}
     \begin{itemize}
-        \item First point
-        \item Second point
-        \item Third point
+        \item Application of search frictions: labor markets (e.g., Mortensen and Pissarides, 1994; Rogerson et al., 2005); housing markets (e.g., Wheaton, 1990); and financial markets (e.g., Duffie et al., 2005).
+        \item This chapter mainly focus on consumer product market.
+        \item Literature on consumer search is related to the literature on consideration sets.
+        \item For instance, the literature on consideration sets originated in marketing, focuses mostly on consumers, and has a relatively stronger empirical bent.
+        \item In contrast, the literature on consumer search started in economics, studies mostly equilibrium (i.e., demand and supply) models, and has a stronger theoretical input.
     \end{itemize}
 \end{frame}
 
-% Section 2
-\section{Methods}
-\begin{frame}{Methods}
-    \begin{block}{Important Block}
-        Key information goes here
+
+\subsection{Introduction to theoretical models}
+\begin{frame}{Introduction to theoretical models}
+    \begin{block}{Starting point:}
+        The observation that price dispersion is almost everywhere even in homogeneous product markets.
     \end{block}
+    Different theoretical models:
+    \begin{itemize}
+        \item Information Clearinghouse
+        \item Simultaneous Search
+        \item Sequential Search
+        \item Sellers’ non-price Behavior
+        \item Product differentiation
+    \end{itemize}
+\end{frame}
+
+\subsection{Why different theoretical models}
+\begin{frame}{Why different theoretical models}
+    \textbf{Information Clearinghouse:}
+    \begin{itemize}
+        \item The Information Clearinghouse model assumes the existence of a mechanism or intermediary (e.g., price comparison websites or information platforms) that aggregates and disseminates product information, typically prices, thereby reducing consumer search costs to near zero. 
+        \item Consumers can access all sellers’ prices at once without needing to search individually.
+    \end{itemize}
+    \textbf{Simultaneous Search:}
+    \begin{itemize}
+        \item The Simultaneous Search model assumes consumers query multiple sellers simultaneously to obtain price or product information.
+        \item Consumers, aware of the price distribution in the market, decide how many sellers (n) to contact and incur search costs proportional to the number of queries.
+        \item The Simultaneous Search model, compared to the Clearinghouse model, endogenizes the number of sellers.
+    \end{itemize}
     
+\end{frame}
+
+\begin{frame}{Why different theoretical models}
+    \textbf{Sequential Search:}
     \begin{itemize}
-        \item Method 1
-        \item Method 2
+        \item The Sequential Search model assumes consumers search sellers one by one, deciding after each search whether to continue searching or purchase based on the observed offer.
+        \item Consumers update their expectations of the price distribution dynamically and use a reservation price to determine when to stop searching.
+        \item The Sequential Search model, compared to the Simultaneous Search model, endogenizes the number of searches, allowing consumers to conduct multiple searches rather than just a single search.
     \end{itemize}
 \end{frame}
 
-% Section 3
-\section{Results}
-\begin{frame}{Results}
-    \begin{columns}
-        \column{0.5\textwidth}
+\begin{frame}{Why different theoretical models}
+    \textbf{Sellers’ non-price Behavior:}
+    \begin{itemize}
+        \item The Sellers’ Non-price Behavior model focuses on how sellers use non-price strategies (e.g., advertising, product complexity, or obfuscation) to influence consumer search costs and purchasing decisions.
+        \item These behaviors aim to increase consumers’ search or cognitive costs, thereby preserving market power.
+    \end{itemize} 
+    \textbf{Product differentiation:}
+    \begin{itemize}
+        \item The Product Differentiation model assumes products vary in quality, features, or brand, leading to heterogeneous consumer preferences.
+        \item Differentiation can be vertical (e.g., quality differences, such as new vs. used cars) or horizontal (e.g., brand preferences, such as different car brands).
+    \end{itemize}
+\end{frame}
+    
+
+\subsection{Clearinghouse Model}
+\begin{frame}{Clearinghouse Model:Assumptions}
+    \begin{itemize}
+        \item Goods are homogeneous and consumers gather information about prices through a clearinghouse(newspapers).
+        \item Some consumers are informed about all prices, whereas other consumers are uninformed.(Reason of price dispersion)
+        \item The informed consumer will buy from the lowest price seller and the uninformed will buy from a random seller.
+        \item Sellers can choose to either set a high price and only sell to some uninformed consumers, or set a lower prices to also attract informed consumers.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Key Features}
+    \textbf{Key Features:}
+    \begin{itemize}
+        \item \textbf{Search Costs:} Near zero, as intermediaries provide centralized information.
+        \item \textbf{Market Outcomes:} Prices converge (reducing price dispersion), competition intensifies, consumer surplus increases, but seller profits may decline.
+        \item \textbf{Applicable Contexts:} Online retail, price comparison websites (e.g., Amazon, Google Shopping), or financial market intermediaries (e.g., Morningstar).
+    \end{itemize}
+    \textbf{Supporting Literature:}
+    \begin{itemize}
+        \item Baye et al. (2001, 2004, 2006) explore how information intermediaries reduce search costs and affect price dispersion and competition.
+        \item Brown and Goolsbee (2002) analyze how the internet enhances price transparency in the insurance market, making it more competitive.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Basic Settings}
+    Our goal is to find how price dispersion in this typical market.
+    \begin{itemize}
+        \item Suppose there is a large number of consumers who desire to purchase, at most, one unit of some good.
+        \item The maximum price any consumer will pay for the good is denoted by $r$.
+        \item Let $I>0$ be the number of informed consumers, and $M>0$ be the number of uninformed consumers.
+        \item Let $n$ be the number of stores, and let $U=\frac{M}{n}$ be the number of uninformed consumer per store. 
+        \item Free entry.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Basic Settings}
+    \begin{itemize}
+        \item Each store has a density function $f(p)$ which indicates the probability with which it charges each price $p$.
+        \item In each store's choice of this pricing strategy, each store takes as given the pricing strategies chosen by the other stores and the demand behavior of the consumers.
+        \item The stores are characterized by identical, strictly declining average cost curves. The cost curve of a representative store will be denoted by $c(q)$.
+    \end{itemize}
+    Only the case of a symmetric equilibrium will be examined, where each firm chooses the same pricing strategy.
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    Key facts about the model:
+    \begin{itemize}
+        \item A store succeeds in its sale if it turns out to have the lowest price of the $n$ prices being offered. In this case the store will get $I+ U$ customers.
+        \item A store fails to have the lowest price, it will get only its share of uninformed customers, namely $U$.
+        \item If two or more stores charge the lowest price, it will be considered a tie, and the low-price stores will each get an equal share of the informed customers.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    Firstly we decide the range of $f(p)$:
+    \begin{itemize}
+        \item Let $p^*=\frac{c(I+U)}{(I+U)}$ be the average cost associated with this number of customers.
+        \item Then the range of $f(p)$ will be $f(p) = 0 \ for\  p > r \ or\  p <  p^*$.
+    \end{itemize}
+    Some properties of $f(p)$:
+    \begin{itemize}
+        \item There is no symmetric equilibrium where all stores charge the same price.
+        \item There are no point masses in the equilibrium pricing strategies.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    Some properties of $f(p)$:
+    \begin{itemize}
+        \item Point masses: $p$ is a point mass of a probability density function $f$ if there is positive probability concentrated at $p$.
+        \item If some price $p$ were charged with positive probability, there would be a positive probability of a tie at $p$. Now suppose a deviant store changed its price to $p-\varepsilon$, then it would lose profits due to price decreases, but gain a fixed positive amount of profits when the other stores tied.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    Proof of the arguments above:
+    \begin{itemize}
+        \item Note that $p^*$ can never be charged with positive probability.
+        \item Suppose then that $p>p^*$ is charged with positive probability. Consider what happens if we charge $p-\varepsilon$ with the probability with which we used to charge $p$, and charge $p$ with probability 0. The increase in profits will be:
+    \end{itemize}
+    \begin{align*}
+        & \Pr\left( P_i > p - \varepsilon \ \forall i,\ P_i \neq p \  \right) \left( (p - \varepsilon)(I + U) - c(I + U) \right) \\
+        &- \Pr\left( P_i > p \ \forall i \right) \left( p(I + U) - c(I + U) \right) \\
+        & \quad + \Pr\left( P_i < p - \varepsilon \ \exists i \right) \left( (p - \varepsilon)U - c(U) \right)  - \Pr\left( P_i < p \ \exists i \right) \left( pU - c(U) \right) \\
+        & \quad + \sum_{k=2}^{n} \Pr\left( P_i \geq p - \varepsilon \ \forall i,\ P_i = p \text{ for } k \text{ stores} \right) \left( (p - \varepsilon)(1 + U) - c(I + U) \right) \\
+        & \quad - \sum_{k=2}^{n} \Pr\left( P_i \geq p \ \forall i,\ P_i = p \text{ for } k \text{ stores} \right) \left( p\left( U+\frac{I}{k} \right) - c\left( U + \frac{I}{k} \right) \right) 
+        \end{align*}
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    Proof of the arguments above:
+    \begin{itemize}
+        \item As $\varepsilon$ approaches zero, the sum of the first four terms approaches zero, while the sum of the last two terms remains a positive number.
+        \item Hence for small $\varepsilon$ profits are positive, contradicting the assumption of an equilibrium strategy.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    Let $F(p)$ be the cumulative distribution function for $f(p)$, we then construct the expected profit function for a representative store:
+    \begin{itemize}
+        \item Two possible events:
         \begin{itemize}
-            \item Result 1
-            \item Result 2
+            \item The store charges price $p$ which is the smallest price being charged. This event happens only if all the other stores charge prices higher than $p$, an event which has probability $(1 - F(p))^{n-1}$ .
+            \item There exists some store who charges a lower price, in which case the store only gets its share of the uninformed customers. This event happens with probability $1-(1 - F(p))^{n-1}$ .
         \end{itemize}
-        
-        \column{0.5\textwidth}
-        % Placeholder for a figure
-        \centering
-        [Your figure here]
-    \end{columns}
-\end{frame}
-
-% Section 4
-\section{Conclusion}
-\begin{frame}{Conclusion}
-    \begin{itemize}
-        \item Main finding 1
-        \item Main finding 2
-        \item Future work
     \end{itemize}
 \end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    \begin{itemize}
+        \item The expected profit of a representative store is:
+        \end{itemize}
+        \begin{align*}
+            \int_{p^*}^{r} &\{\pi_s(p)  (1 - F(p))^{n-1}+ \pi_f(p)  \bigg[1 -(1 - F(p))^{n-1} \bigg]\}f(p)\ dp \\
+               \text{where} \quad 
+               \pi_s(p) &= p(U + I) - c(U + I) \\
+               \pi_f(p) &= pU - c(U) 
+           \end{align*}
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    The maximization problem of the firm is to choose the density function $f(p)$ so as to maximize expected profits subject to the constraints:
+    $$
+    f(p)\geq 0, \int_{p^*}^rf(p)\ dp=1
+    $$
+    We don’t solve this maximization problem in an ordinary way.
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+        It is clear that all prices that are charged with positive density must yield the same expected profit, which is zero according to free entry.
+        Then we have:
+        $$
+        \pi_s(p) (1 - F(p))^{n-1}+ \pi_f(p)  \bigg[1 -(1 - F(p))^{n-1} \bigg]=0
+        $$
+        Rearrange this equation:
+        $$  
+        F(p) =1- \left( \frac{\pi_f(p)}{\pi_f(p) - \pi_s(p)} \right)^{\frac{1}{n-1}} 
+        $$
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    Suppose $F(p)$ is well defined, we can compute density function by:
+    $$
+    f(p)=F’(p)
+    $$
+    For simplicity, suppose the cost function has fixed cost $k>0$ and zero marginal cost, and rearrange $F(p)$, we have:
+    $$  
+    F(p) = I - \left[ \left( \frac{k}{I} \right) \left( \frac{1}{p} - \frac{1}{r} \right) \right]^{\frac{1}{n-1}}
+    $$
+    By differentiating $F(p)$,we have:
+    $$
+    f(p) = F'(p) = \frac{(\frac{K}{I})^{\frac{1}{n-1}}}{n-1} \cdot \frac{\left( \frac{1}{p} - \frac{1}{r} \right)^{\frac{1}{n-1}-1}}{p^2}
+    $$
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    Let,
+    $$
+    m = 1 - \frac{1}{n-1} = \frac{n-2}{n-1} = \frac{rM - 2k}{rM - k}
+    $$
+    We have:
+    $$  
+    f(p) = \frac{k\left( \frac{k}{I} \right)^{1-m}}{(rM - k)} \cdot \frac{1}{p^{2-m}\left( 1 - \frac{p}{r} \right)^m}
+    $$
+\end{frame}
+
+\begin{frame}{Clearinghouse Model:Model Analysis}
+    If $n$ is reasonably large, $m$ will be approximately $1$, so $f(p)$ will be proportional to
+    $$
+    f(p)\approx \frac{1}{p\left( 1-\frac{p}{r} \right)}
+    $$
+    This is a U-shaped density of prices. Note that stores tend to charge extreme prices with higher probability than they charge intermediate prices.
+\end{frame}
+
+\subsection{Simultaneous Search Model}
+\begin{frame}{Simultaneous Search Model:Assumptions}
+    Assumptions for Simultaneous search model:
+    \begin{itemize}
+        \item Sellers and goods are still homogeneous, consumers are also homogeneous ex ante.
+        \item Consumers search simultaneously by choosing at the beginning of the game the number of quotes to obtain from sellers, paying a per-quote cost.
+        \item Consumers obtain their first price quote for free in order to participate in the market and obtain non-negative surplus.
+    \end{itemize}
+    One of the most classic papers in this group of models is Burnett and Judd, 1983. In order to connect it to Varian’s(1980) model, we simplify its assumption by assuming that all consumers are ex ante uninformed, but they can decide to become informed by paying a search costs $s$, which is common across consumers.
+\end{frame}
+
+\begin{frame}{Simultaneous Search Model:Key Features}
+    \textbf{Key Features:}
+    \begin{itemize}
+        \item \textbf{Search Costs:} Proportional to the number of sellers searched, either fixed or increasing with n.
+        \item \textbf{Market Outcomes:} Price dispersion persists due to limited search scope; sellers retain some market power due to search costs. The endogenous choice of search intensity (n) shapes market equilibrium.
+        \item \textbf{Applicable Contexts:} Markets where consumers can quickly contact multiple sellers, such as auto insurance (Honka, 2014) or online retail (Moraga-González et al., 2021).
+    \end{itemize}
+    \textbf{Supporting Literature:}
+    \begin{itemize}
+        \item Chade and Smith (2006) develop a simultaneous search model, analyzing how consumers choose the number of sellers to query.
+        \item Moraga-González et al. (2021) study simultaneous search in the automobile market and its impact on prices.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Simultaneous Search Model:Model Analysis}
+    There are two possible cases:\\
+    If the search cost s is not too large:
+    \begin{itemize}
+        \item Sellers are indifferent between a range of prices chosen according to distribution the same as in Varian's(1980) model.
+        \item Consumers are indifferent between becoming informed or not, with a fraction $\lambda$ choosing not to become informed and the complementary fraction $1 - \lambda$ choosing to become informed, where fraction $\lambda$ satisfies:
+    \end{itemize}
+    $$
+    p_{U}(\lambda)-p_{I}(\lambda)=s
+    $$
+    where $p_U(\lambda)$ and $p_I (\lambda)$ are the expected prices uninformed and informed consumers pay, respectively. 
+\end{frame}
+
+\begin{frame}{Simultaneous Search Model:Model Analysis}
+    If the search cost s is large:
+    \begin{itemize}
+        \item Up to two symmetric mixed-equilibria exist, with the one with the lower $\lambda$ being a stable equilibrium and the one with the higher $\lambda$ unstable.
+    \end{itemize}
+\end{frame}
+
+	
+
+\subsection{Sequential Search Model}
+\begin{frame}{Sequential Search Model: Introduction}
+    Why sequential search model?
+    \begin{itemize}
+        \item Models with simultaneous, fixed-sample-size search suffer from the potential drawback that in some cases it may not be optimal for a consumer to obtain a fixed number of quotes. Rothschild (1973)
+        \item For example, If a consumer finds a low price, the additional expected benefits of further quotes may be lower than the costs of gathering them.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sequential Search Model:Key Features}
+    \textbf{Key Features:}
+    \begin{itemize}
+        \item \textbf{Search Costs:} Incurred per search, either fixed or increasing, with decisions made dynamically.
+        \item \textbf{Market Outcomes:} Price dispersion is more pronounced due to high search costs, which may lead consumers to stop searching early, allowing sellers to retain market power. Market efficiency is lower than in simultaneous search due to the time-consuming process.
+        \item \textbf{Applicable Contexts:} Scenarios where consumers cannot easily access multiple sellers at once, such as traditional retail, real estate (Wheaton, 1990)
+    \end{itemize}
+    \textbf{Supporting Literature:}
+    \begin{itemize}
+        \item Stigler (1961) introduces search costs as a source of price dispersion, laying the foundation for sequential search models.
+        \item Weitzman (1979) provides optimal stopping rules for sequential search, emphasizing the role of reservation prices.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sequential Search Model: Diamond paradox }
+    Diamond (1971) is one of the first papers to consider sequential search in a market with homogeneous buyers and homogeneous sellers.\\
+    Conclusion of this model:
+    \begin{itemize}
+        \item Regardless of the number of firms, the only equilibrium features all sellers setting the monopoly price and consumers not searching at all.
+    \end{itemize}
+    Why?
+    \begin{itemize}
+        \item Assume that consumers observe one price quote for free, but they have to pay a search cost to learn each additional price.
+        \item If firms charge prices below the monopoly price, each firm setting the lowest available price could increase its profits by increasing its price by a small amount(lower than the search cost).
+        \item The monopoly price is the only one without such incentives, and thus the only equilibrium.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sequential Search Model: Diamond paradox }
+    How to solve the paradox?
+    \begin{itemize}
+        \item \textbf{Introduce Consumer Heterogeneity:} Assume consumers have heterogeneous search costs or valuations for the product. This heterogeneity creates a distribution of reservation prices, leading some consumers to search more than others, which incentivizes sellers to compete on price.
+        \item \textbf{Allow for Product Differentiation:} Introduce horizontal or vertical product differentiation, so goods are no longer perfectly homogeneous. Consumers have preferences for specific products, which affects their search behavior and reservation prices.
+    \end{itemize}
+    
+\end{frame}
+
+\subsection{Sellers’ non-price behavior}
+\begin{frame}{Sellers’ non-price behavior: Basic Settings}
+    Then we allow sellers to expand the scope of their activities.\\
+    Basic settings:
+    \begin{itemize}
+        \item Sellers convey price information to consumers, for example through advertisements.
+        \item Consumers then choose from the set of firms they become aware of.
+        \item N symmetric firms produce a homogeneous good.
+        \item Each firm can send independent price ads to a fraction $\alpha$ of homogeneous consumers with valuation $v$ at a convex cost $c(\alpha)$.
+        \item Firms simultaneously choose their ad intensity $\alpha$ and price $p$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sellers’ non-price behavior:Key Features}
+    \textbf{Key Features:}
+    \begin{itemize}
+        \item \textbf{Search Costs:} Increased by sellers’ actions, such as obfuscation or complex pricing.
+        \item \textbf{Market Outcomes:} Price dispersion increases, market efficiency decreases, and sellers may earn higher profits. Consumers face higher purchasing costs due to information asymmetry or complexity.
+        \item \textbf{Applicable Contexts:} Retail financial markets (Carlin, 2009), online markets (Ellison and Ellison, 2009), or healthcare markets (Grennan and Swanson, 2020).
+    \end{itemize}
+    \textbf{Supporting Literature:}
+    \begin{itemize}
+        \item Carlin (2009) studies strategic price complexity in retail financial markets.
+        \item Wilson (2010) explores how sellers use obfuscation to influence consumer search.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sellers’ non-price behavior: Model Analysis}
+    The equilibrium distribution of prices equals:
+    $$ 
+    F(p) = \frac{1}{\alpha}  \left( 1-(1-\alpha)\left( \frac{v}{p} \right) ^{\frac{1}{N-1}}\right) 
+    $$
+    Conclusion of this model:
+    \begin{itemize}
+        \item As the cost of advertising drops, buyers become better informed through more ads, and thus equilibrium prices also drop and converge to the Bertrand outcome.
+        \item As advertising becomes more expensive, fewer buyers become informed, prices rise, and the support of the distribution of prices shrinks toward the monopoly price.
+    \end{itemize}
+\end{frame}
+
+\subsection{Product Differentiation}
+\begin{frame}{Product Differentiation Model: Basic Settings}
+    The last group of models introduces product differentiation and consumer taste heterogeneity.
+    \begin{itemize}
+        \item In homogeneous goods markets, consumers only motive to search is to find low prices. When goods are differentiated, they search for high match values, sometimes in addition to low prices.
+        \item Consumers view sellers as ex ante identical, search sequentially, and thus sample sellers in random order.
+        \item Products are horizontally different.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Product Differentiation:Key Features}
+    \textbf{Key Features:}
+    \begin{itemize}
+        \item \textbf{Search Costs:} Depend on the strength of consumer preferences for differentiated products; strong preferences may reduce search.
+        \item \textbf{Market Outcomes:} Price dispersion and market power depend on the degree of differentiation. Vertical differentiation (e.g., used car markets) may lead to quality tiering; horizontal differentiation (e.g., car brands) may foster brand loyalty and higher prices.
+        \item \textbf{Applicable Contexts:} Automobile markets (Berry et al., 1995), used book markets (Ellison and Ellison, 2018)
+    \end{itemize}
+    \textbf{Supporting Literature:}
+    \begin{itemize}
+        \item Perloff and Salop (1985) develop a product differentiation model, analyzing its impact on price competition.
+        \item Berry et al. (1995) study horizontal and vertical differentiation in the automobile market and its effects on prices and demand.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Product Differentiation Model: Main Findings}
+    \begin{itemize}
+        \item Although in equilibrium firms set identical prices, consumer search behavior disciplines sellers’ prices.
+        \item Consumers search to find a high match value, and this search behavior disciplines firms’ pricing choices and reduces equilibrium prices.
+        \item An increase in product differentiation increases consumer search, which in turn increases competition among sellers, and thus may lower prices.
+    \end{itemize}
+\end{frame}
+
+
+\section{Role of Intermediaries}
+\begin{frame}{Role of Intermediaries: Introduction}
+    The presence of search frictions allows for the possibility that third-party agents intermediate transactions between buyers and sellers.\\
+    Different forms of intermediaries:
+    \begin{itemize}
+        \item Intermediaries take ownership of the goods and build inventories—like dealers and retailers.
+        \item Serve as information intermediaries that help consumers in their search process—e.g., brokers, real estate agents, financial advisors, platforms, or recommender systems.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Role of Intermediaries:Key Features}
+    \textbf{Key Features:}
+    \begin{itemize}
+        \item Search Costs: Intermediaries reduce consumer search costs by providing access to multiple sellers or products, often acting as a centralized hub. However, consumers may incur costs (e.g., fees) to access intermediary services.
+        \item Matching Frictions: Intermediaries improve the matching process by connecting buyers with sellers who offer products that better suit their preferences, reducing the time and effort needed to find a suitable match.
+        \item Information Asymmetry: Intermediaries may mitigate asymmetric information by certifying product quality (e.g., used car dealers providing inspections) or providing reputation mechanisms (e.g., eBay seller ratings).
+    \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Role of Intermediaries: Information itermediaries}
+    Baye and Morgan (2001) extend Varian’s (1980) framework to study the interaction between the information clearinghouse’s feesetting decision and the competitiveness of the homogeneous product market it serves.
+    \begin{itemize}
+        \item The clearinghouse charges fees to firms to post prices on its site, and to consumers to access the list of posted prices.
+        \item The paper shows that introducing this market for information may not increase welfare.
+    \end{itemize}
+\end{frame}
+
+
+
+
 
 \end{document} 
